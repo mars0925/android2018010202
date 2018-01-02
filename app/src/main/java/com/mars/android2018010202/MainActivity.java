@@ -13,10 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cb = (CheckBox)findViewById(R.id.checkBox);
+        //使用CompoundButton.OnCheckedChangeListener()當監聽器
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b)//布林值
                 {
                     Toast.makeText(MainActivity.this, "打勾了", Toast.LENGTH_SHORT).show();
                 }
